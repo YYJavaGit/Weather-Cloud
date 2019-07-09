@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xiaozhu</groupId>
+    <artifactId>weather</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Weather-Cloud-API</module>
+        <module>WeatherEureka-7001</module>
+        <module>WeatherEureka-7002</module>
+        <module>WeatherEureka-7003</module>
+    </modules>
+    <packaging>pom</packaging>
+    <properties>
+<!--        让整个项目统一字符集编码，就需要设定<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>；-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<!--        JDK版本-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+<!--        SpringBoot统一版本-->
+        <spring-boot.version>1.5.19.RELEASE</spring-boot.version>
+<!--        SpringCloud统一版本-->
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+        <!--        阿里连接池统一版本-->
+        <druid.version>1.1.10</druid.version>
+<!--        Mysql驱动统一版本-->
+        <mysql-connector.version>5.1.47</mysql-connector.version>
+<!--        MyBatis统一版本-->
+        <mybatis-starter.version>1.3.3</mybatis-starter.version>
+        <!--        Junit统一版本-->
+        <junit.version>4.12</junit.version>
+        <!--        Log4j统一版本-->
+        <log4j.version>1.2.17</log4j.version>
+<!--        Logback统一版本-->
+        <logback.version>1.2.3</logback.version>
+<!--        lombok 是一个非常神奇的 java 类库，会利用注解自动生成 java Bean 中烦人的 Getter、Setting，
+            还能自动生成 logger、ToString、HashCode、Builder 等 java 特色的函数或是符合设计模式的函数，
+            能够让你 java Bean 更简洁，更美观。-->
+        <lombok.version>1.18.6</lombok.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>Weather-Cloud</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
