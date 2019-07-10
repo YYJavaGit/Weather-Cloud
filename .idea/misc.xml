@@ -7,6 +7,14 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Weather-Cloud-Provider-800/pom.xml" />
+        <option value="$PROJECT_DIR$/Weather-Cloud-Provider-8002/pom.xml" />
+        <option value="$PROJECT_DIR$/Weather-Cloud-Provider-8003/pom.xml" />
+        <option value="$PROJECT_DIR$/WeatherCloudProvider8002/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">

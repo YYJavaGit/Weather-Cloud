@@ -6,11 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WeatherEureka7001" />
-        <module name="WeatherCloudAPI" />
         <module name="WeatherEureka7003" />
         <module name="WeatherEureka7002" />
+        <module name="WeatherEureka7001" />
+        <module name="WeatherCloudProvider8001" />
+        <module name="WeatherCloudAPI" />
+        <module name="WeatherCloudConsumer80" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="WeatherCloudProvider800" target="1.8" />
+      <module name="WeatherCloudProvider8002" target="1.8" />
+      <module name="WeatherCloudProvider8003" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

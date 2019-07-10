@@ -1,6 +1,8 @@
 package com.xiaozhu.weather.po;
 
-public class Province {
+import java.io.Serializable;
+
+public class Province implements Serializable {
     private String code;
     private String name;
     private String url;

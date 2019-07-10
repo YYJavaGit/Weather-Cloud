@@ -1,6 +1,8 @@
 package com.xiaozhu.weather.po;
 
-public class City {
+import java.io.Serializable;
+
+public class City implements Serializable {
     private String id;
     private String url;
     private String code;
