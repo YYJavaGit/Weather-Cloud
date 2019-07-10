@@ -37,6 +37,7 @@ public class PureNetUtil {
         } else {
             temp = "http://www.nmc.cn/f/rest/province/" + cityUrl;
         }
+        System.out.println(temp);
         StringBuilder stringBuilder = new StringBuilder();
         try {
             // 1.URL类封装了大量复杂的实现细节，这里将一个字符串构造成一个URL对象
